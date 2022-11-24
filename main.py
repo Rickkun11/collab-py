@@ -12,8 +12,8 @@ for kata in sentence:
       print(s.term, end=' ')
 
 # download and extract indo4B
-!wget https://storage.googleapis.com/babert-pretraining/IndoNLU_finals/dataset/preprocessed/dataset_wot_uncased_blanklines.tar.xz
-!tar -xvf dataset_wot_uncased_blanklines.tar.xz
+wget https://storage.googleapis.com/babert-pretraining/IndoNLU_finals/dataset/preprocessed/dataset_wot_uncased_blanklines.tar.xz
+tar -xvf dataset_wot_uncased_blanklines.tar.xz
 
 # install library symspellpy
 !pip install symspellpy
