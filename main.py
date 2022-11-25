@@ -3,7 +3,7 @@ import urllib.request
 import tarfile
 thetarfile = "https://storage.googleapis.com/babert-pretraining/IndoNLU_finals/dataset/preprocessed/dataset_wot_uncased_blanklines.tar.xz"
 ftpstream = urllib.request.urlopen(thetarfile)
-thetarfile = tarfile.open(fileobj=ftpstream, mode="r|gz")
+thetarfile = tarfile.open(fileobj=ftpstream, mode="r|xz")
 thetarfile.extractall()
 
 #lookup suggestions for multi-word input strings (supports compound splitting & merging)
