@@ -1,3 +1,11 @@
+# download and extract indo4B
+import urllib.request
+import tarfile
+thetarfile = "https://storage.googleapis.com/babert-pretraining/IndoNLU_finals/dataset/preprocessed/dataset_wot_uncased_blanklines.tar.xz"
+ftpstream = urllib.request.urlopen(thetarfile)
+thetarfile = tarfile.open(fileobj=ftpstream, mode="r|gz")
+thetarfile.extractall()
+
 #lookup suggestions for multi-word input strings (supports compound splitting & merging)
 list_kata = 'Manfaat Apel buat Badan Sehat serta Bebas dari Penyakit. Tidak cuma itu, buah apel juga memilikki antioksidan, semacam flavonoid, serta pektin yang baik untuk kesehatan badan serta menghindari bermacam penyakit. Anda dapat konsumsi buah apel dengan bermacamm cara, baik dimakan langsung, dibuat juice, ataupun dijadikan salad buah. Terdapat beberapa khasiat yang dapat anda peroleh dari komsumsi buah apel, antara llain.'
 sentence = list_kata.split()
@@ -10,10 +18,6 @@ for kata in sentence:
 #display term and edit distance
     for s in suggestion:
       print(s.term, end=' ')
-
-# download and extract indo4B
-wget https://storage.googleapis.com/babert-pretraining/IndoNLU_finals/dataset/preprocessed/dataset_wot_uncased_blanklines.tar.xz
-tar -xvf dataset_wot_uncased_blanklines.tar.xz
 
 # install library symspellpy
 !pip install symspellpy
