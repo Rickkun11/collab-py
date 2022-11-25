@@ -20,7 +20,7 @@ for kata in sentence:
       print(s.term, end=' ')
 
 # library symspellpy
-import SymSpell, Verbosity
+from symspellpy import SymSpell, Verbosity
 
 # initialize
 sym_spell = SymSpell()
