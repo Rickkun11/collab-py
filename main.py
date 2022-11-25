@@ -19,9 +19,7 @@ for kata in sentence:
     for s in suggestion:
       print(s.term, end=' ')
 
-# install library symspellpy
-!pip install symspellpy
-
+# library symspellpy
 from symspellpy import SymSpell, Verbosity
 
 # initialize
