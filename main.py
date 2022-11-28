@@ -8,7 +8,7 @@ path_corpus = "kompas.txt"
 sym_spell.create_dictionary(path_corpus)
 
 #lookup suggestions for multi-word input strings (supports compound splitting & merging)
-list_kata = 'Bhasa merupakan alat komonikasi yang sunguh penting. Melalui bhasa manusia dpat menyampaikan isi hatii kepda sesamanya, mewarisi dan mewariskan, menerimo dan memberi pengtahuan kepada sesamanya. Bahkn dengn bahsa pula mnusia dapat mengekspresokan jiwah seninya. Dengn demikian jelaslah bhwa bahasab nerupakan sarana komunikasi yang sngat penting dlam kehidupan manusio.'
+list_kata = 'aokdaowkdakadwo'
 sentence = list_kata.split()
 
 for kata in sentence:

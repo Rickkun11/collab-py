@@ -76,11 +76,24 @@ function w3_close() {
 }
 </script>
 
+<py-env>
+  - paths:
+    - main.py
+</py-env>
 <py-script>
-    import list_kata from main.py
 
-    textinput = Element("textinput")
-    textinput += list_kata
+  from main import list_kata
+
+  console.log(list_kata)
+
+  textinput = Element("textinput")
+  textoutput = Element("outputtext")
+
+    
+
+
+    
+    
 </py-script>
 </body>
 </html>
