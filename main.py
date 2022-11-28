@@ -7,8 +7,8 @@ app = Flask(__name__)
 @jsf.use(app)
 class App:
     def __init__(self):
-        
-
+        inputtext = self.js.document.getElementById("inputtext").innerText = list_kata
+        print (inputtext)
     
 @app.route('/')
 def index():
