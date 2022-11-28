@@ -15,7 +15,7 @@ class App:
         sym_spell.create_dictionary(path_corpus)
 
         #lookup suggestions for multi-word input strings (supports compound splitting & merging)
-        list_kata = ''
+        list_kata = 'awiwkok'
         sentence = list_kata.split()
 
         for kata in sentence:
