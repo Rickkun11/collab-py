@@ -22,5 +22,5 @@ from symspellpy import SymSpell, Verbosity
 sym_spell = SymSpell()
 
 # create dictionary
-path_corpus = "/content/processed_uncased_blanklines/kompas.txt"
+path_corpus = "kompas.txt"
 sym_spell.create_dictionary(path_corpus)
