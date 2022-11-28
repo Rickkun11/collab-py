@@ -1,7 +1,3 @@
-# extract
-import patoolib
-patoolib.extract_archive("dataset.rar", outdir="/")
-
 #lookup suggestions for multi-word input strings (supports compound splitting & merging)
 list_kata = 'Manfaat Apel buat Badan Sehat serta Bebas dari Penyakit. Tidak cuma itu, buah apel juga memilikki antioksidan, semacam flavonoid, serta pektin yang baik untuk kesehatan badan serta menghindari bermacam penyakit. Anda dapat konsumsi buah apel dengan bermacamm cara, baik dimakan langsung, dibuat juice, ataupun dijadikan salad buah. Terdapat beberapa khasiat yang dapat anda peroleh dari komsumsi buah apel, antara llain.'
 sentence = list_kata.split()
