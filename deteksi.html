@@ -76,35 +76,7 @@ function w3_close() {
 </script>
 
 <!--Python script-->
-<py-env>
- - symspellpy
-</py-env>
-<py-script>
-  
-
-  from symspellpy import SymSpell, Verbosity
-
-  # initialize
-  sym_spell = SymSpell()
-  
-  # create dictionary
-  path_corpus = "kompas.txt"
-  sym_spell.create_dictionary(path_corpus)
-  
-  #lookup suggestions for multi-word input strings (supports compound splitting & merging)
-  list_kata = pyodideGlobals.get('textinput')
-  sentence = list_kata.split()
-  
-  for kata in sentence:
-      maxEditDistanceLookup = 2
-      include_unknown = True
-      suggestion = sym_spell.lookup(kata, Verbosity.TOP, maxEditDistanceLookup, include_unknown)
-  
-  #display term and edit distance
-      for s in suggestion:
-          getTextOutput = pyodideGlobals.get('textoutput')
-          getTextOutput = s.term, end=' '
-</py-script>
+<py-script src="main.py"></py-script>
 
 </body>
 <script defer src="https://pyscript.net/latest/pyscript.js"></script>
