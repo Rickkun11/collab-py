@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Deteksi Ejaan</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.prinsh.com/NathanPrinsley-textstyle/nprinsh-stext.css"/>
+
+<style>
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-hover w3-card " id="myNavbar">
+    <img class="image" src="/img/Logo.png">
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+        <a href="/index.html" class="w3-bar-item w3-button w3-white"><i class="fa fa-home" aria-hidden="true" style="width: 50px;"></i></a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+
+</nav>
+
+<!-- Detect Section -->
+<div class="deteksi">
+  <div class="deteksi w3-container" style="padding:128px 16px" id="deteksi">
+    <h3 class="deteksi w3-center nprinsley-text-blupelan">DETECT YOUR SPELLING WRITE</h3>
+    <div class="deteksi w3-row-padding w3-center" style="margin-top:64px">
+        <form class="deteksi-inputarea" method="post">
+          <div class="deteksi w3-half w3-container">
+              <textarea class="deteksi-text" type="text" id="textinput" cols="75" rows="10" placeholder="Inputkan teks yang ingin di deteksi ejaannya disini!"></textarea><br>
+              <input class="btn btn-lg btn-primary" type="submit" value="Deteksi Ejaan" onclick="hasildeteksi()"></input>
+          </div>
+          <div class="deteksi w3-half w3-container">
+              <textarea class="deteksi-output" type="text" id="outputtext" cols="75" rows="10" placeholder="Hasil deteksi ejaan disini!"></textarea>
+          </div>
+        </form>
+    </div>
+  </div>
+</div> 
+
+<script>
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+</body>
+</html>
