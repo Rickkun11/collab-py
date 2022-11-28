@@ -29,7 +29,8 @@ class App:
         
         textoutput = self.js.document.getElementById("outputtext")
         textinput = self.js.document.getElementById("textinput").innerHTML = list_kata
-
+        
+        self.console.log(textinput)
 
     
 @app.route('/')
