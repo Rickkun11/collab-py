@@ -4,7 +4,7 @@ import jyserver.Flask as jsf
 from spelling import *
 
 app = Flask(__name__)
-@jsf.use()
+@jsf.use(app)
 class App:
     def __init__(self):
         self.console.log(list_kata)
