@@ -7,7 +7,7 @@ app = Flask(__name__)
 @jsf.use(app)
 class App:
     def __init__(self):
-        self.console.log(list_kata)
+        self.js.console.log(list_kata)
 
     
 @app.route('/')
