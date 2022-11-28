@@ -1,4 +1,4 @@
-from symspellpy import SymSpell, Verbosity
+from symspellpy.symspellpy import SymSpell, Verbosity
 
   # initialize
   sym_spell = SymSpell()
