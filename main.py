@@ -26,6 +26,11 @@ class App:
         #display term and edit distance
             for s in suggestion:
                 print(s.term, end=' ')
+        
+        textoutput = self.js.document.getElementById("outputtext")
+        textinput = self.js.document.getElementById("textinput").innerHTML = list_kata
+
+
     
 @app.route('/')
 def index():
