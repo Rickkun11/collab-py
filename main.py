@@ -18,4 +18,4 @@ for kata in sentence:
 
 #display term and edit distance
     for s in suggestion:
-      print(s.term, end=' ')
+        print(s.term, end=' ')
