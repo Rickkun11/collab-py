@@ -4,6 +4,7 @@ import jyserver.Flask as jsf
 from spelling import *
 
 app = Flask(__name__)
+@jsf.use(app)
 class App:
     def __init__(self):
         self.console.log(list_kata)
@@ -14,7 +15,7 @@ def index():
         return App.render(render_template('index.html'))
 
 if __name__ == '__main__':
-app.run()
+    app.run()
 
 
 
