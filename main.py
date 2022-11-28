@@ -1,11 +1,14 @@
-#lookup suggestions for multi-word input strings (supports compound splitting & merging)
-# library symspellpy
 from symspellpy import SymSpell, Verbosity
 
 # initialize
 sym_spell = SymSpell()
 
-list_kata = 'Manfaat Apel buat Badan Sehat serta Bebas dari Penyakit. Tidak cuma itu, buah apel juga memilikki antioksidan, semacam flavonoid, serta pektin yang baik untuk kesehatan badan serta menghindari bermacam penyakit. Anda dapat konsumsi buah apel dengan bermacamm cara, baik dimakan langsung, dibuat juice, ataupun dijadikan salad buah. Terdapat beberapa khasiat yang dapat anda peroleh dari komsumsi buah apel, antara llain.'
+# create dictionary
+path_corpus = "kompas.txt"
+sym_spell.create_dictionary(path_corpus)
+
+#lookup suggestions for multi-word input strings (supports compound splitting & merging)
+list_kata = 'Bhasa merupakan alat komonikasi yang sunguh penting. Melalui bhasa manusia dpat menyampaikan isi hatii kepda sesamanya, mewarisi dan mewariskan, menerimo dan memberi pengtahuan kepada sesamanya. Bahkn dengn bahsa pula mnusia dapat mengekspresokan jiwah seninya. Dengn demikian jelaslah bhwa bahasab nerupakan sarana komunikasi yang sngat penting dlam kehidupan manusio.'
 sentence = list_kata.split()
 
 for kata in sentence:
@@ -15,9 +18,4 @@ for kata in sentence:
 
 #display term and edit distance
     for s in suggestion:
-        print(s.term, end=' ')
-
-
-# create dictionary
-path_corpus = "kompas.txt"
-sym_spell.create_dictionary(path_corpus)
+      print(s.term, end=' ')
