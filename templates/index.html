@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,10 +19,10 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-pale-green w3-card" id="myNavbar">
-    <img class="image" src="/img/Logo.png">
+    <img class="image" src="{{ url_for('static', filename='/img/Logo.png') }}">
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-        <a href="/index.html" class="w3-bar-item w3-button w3-white"><i class="fa fa-home" aria-hidden="true" style="width: 50px;"></i></a>
+        <a href="/" class="w3-bar-item w3-button w3-white"><i class="fa fa-home" aria-hidden="true" style="width: 50px;"></i></a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -41,14 +41,14 @@
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="fullscreen-bg">
-    <video loop muted autoplay poster="../Deteksi Ejaan/img/Latar.png" class="fullscreen-bg__video">
-        <source src="/video/Header.mp4" type="video/mp4">
+    <video loop muted autoplay poster="{{ url_for('static', filename='img/Latar.png') }}" class="fullscreen-bg__video">
+        <source src="{{ url_for('static', filename='/video/Header.mp4') }}" type="video/mp4">
     </video>
   </div>
   <div class="w3-display-left w3-text-white" style="padding:48px">
     <span class="w3-jumbo w3-hide-small nprinsley-detaxt">Wellcome To DeteksiEjaan</span><br><br><br>
     <span class="w3-large">Start To Detect The Spelling Below!</span><br>
-    <p><a href="/deteksi.html" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-hover-opacity-off w3-animate-zoom"><span> Mulai DeteksiEjaan</span></a></p>
+    <p><a href="/deteksi" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-hover-opacity-off w3-animate-zoom"><span> Mulai DeteksiEjaan</span></a></p>
   </div> 
 </header>
  
