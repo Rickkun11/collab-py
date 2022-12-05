@@ -37,4 +37,4 @@ def submit():
                     hasil = suggestion
     return render_template('deteksi.html', hasil = hasil, input=input )
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
